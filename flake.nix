@@ -17,13 +17,18 @@
           };
           extraInstallCommands = ''
             mkdir -p $out/share/applications
-            cat > $out/share/applications/fluxer-canary.desktop << EOF
+            cat > $out/share/applications/fluxer-canary.desktop <<EOF
             [Desktop Entry]
             Name=Fluxer Canary
-            Exec=fluxer-canary
-            Icon=fluxer-canary
+            Exec=fluxer-canary %U
+            Terminal=false
             Type=Application
-            Categories=Network;
+            Icon=fluxer-canary
+            StartupWMClass=fluxer-canary
+            Comment=Instant messaging and VoIP application
+            Categories=Network;InstantMessaging;
+            SingleMainWindow=true
+            MimeType=x-scheme-handler/fluxer;
             EOF
           '';
         })
