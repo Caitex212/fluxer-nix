@@ -4,8 +4,19 @@ NixOS overlay for the [Fluxer canary](https://canary.fluxer.app) desktop client.
 
 ## Usage
 
-Add the overlay in your `flake.nix`, then add `fluxer-canary` to your packages:
+Add the overlay in your `flake.nix`.
+### Inputs:
+```nix
+# Fluxer
+fluxer-canary.url = "github:Caitex212/fluxer-canary-nix";
+fluxer-canary.inputs.nixpkgs.follows = "nixpkgs";
+```
+### Nix Module:
+```nix
+inputs.fluxer-canary.nixosModules.default
+```
 
+Then add `fluxer-canary` to your packages:
 ```nix
 environment.systemPackages = with pkgs; [ fluxer-canary ];
 ```
