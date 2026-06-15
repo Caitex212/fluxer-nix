@@ -1,4 +1,4 @@
-# unofficial fluxer-canary-nix
+# Unofficial fluxer-canary-nix
 
 NixOS overlay for the [Fluxer canary](https://canary.fluxer.app) desktop client.
 
